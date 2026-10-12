@@ -1,0 +1,560 @@
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+       <meta charset="UTF-8">
+
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+       <title>Privacy Policy - 3DGameHouse</title>
+
+       <style>
+        :root {
+            color-scheme: dark;
+            --bg: #070b14;
+            --panel: rgba(15, 23, 42, 0.88);
+            --panel-border: rgba(125, 211, 252, 0.18);
+            --text: #e8eef8;
+            --muted: #a7b4c8;
+            --cyan: #38bdf8;
+            --blue: #6366f1;
+            --green: #4ade80;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            min-height: 100vh;
+            padding: 1px 0 40px;
+            font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background:
+                radial-gradient(ellipse at 12% 8%, rgba(14, 165, 233, .16), transparent 36%),
+                radial-gradient(ellipse at 88% 30%, rgba(99, 102, 241, .15), transparent 34%),
+                radial-gradient(ellipse at 50% 100%, rgba(34, 197, 94, .08), transparent 36%),
+                var(--bg);
+            color: var(--text);
+            line-height: 1.8;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            opacity: .22;
+            background-image: linear-gradient(rgba(148,163,184,.07) 1px, transparent 1px),
+                              linear-gradient(90deg, rgba(148,163,184,.07) 1px, transparent 1px);
+            background-size: 44px 44px;
+            mask-image: linear-gradient(to bottom, black, transparent 85%);
+        }
+
+        .container {
+            position: relative;
+            width: min(100% - 36px, 980px);
+            margin: 56px auto;
+            padding: clamp(25px, 5vw, 58px);
+            background: linear-gradient(145deg, rgba(15, 23, 42, .96), rgba(8, 15, 29, .94));
+            border: 1px solid var(--panel-border);
+            border-radius: 24px;
+            box-shadow: 0 28px 90px rgba(0, 0, 0, .42), 0 0 45px rgba(56, 189, 248, .06);
+            backdrop-filter: blur(18px);
+            animation: rise-in .8s ease both;
+        }
+
+        .container::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 12%; right: 12%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--cyan), var(--blue), transparent);
+            opacity: .9;
+        }
+
+        h1 {
+            font-size: clamp(2rem, 5vw, 3.15rem);
+            line-height: 1.15;
+            letter-spacing: -.045em;
+            text-align: center;
+            margin-bottom: 14px;
+            color: #f8fafc;
+            background: linear-gradient(100deg, #fff 10%, #7dd3fc 48%, #a5b4fc 80%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .date {
+            width: fit-content;
+            margin: 0 auto 38px;
+            padding: 7px 15px;
+            border: 1px solid rgba(56, 189, 248, .24);
+            border-radius: 999px;
+            background: rgba(14, 165, 233, .08);
+            color: #7dd3fc;
+            font-size: .88rem;
+            text-align: center;
+        }
+
+        h2 {
+            position: relative;
+            margin: 38px 0 14px;
+            padding-left: 15px;
+            color: #7dd3fc;
+            font-size: clamp(1.2rem, 3vw, 1.5rem);
+            line-height: 1.35;
+            letter-spacing: -.02em;
+            text-align: left;
+        }
+
+        h2::before {
+            content: "";
+            position: absolute;
+            left: 0; top: .16em; bottom: .16em;
+            width: 3px;
+            border-radius: 5px;
+            background: linear-gradient(var(--cyan), var(--blue));
+            box-shadow: 0 0 14px rgba(56, 189, 248, .45);
+        }
+
+        p { margin-bottom: 16px; color: #cbd5e1; font-size: 1rem; }
+        strong { color: #f8fafc; font-weight: 650; }
+
+        ul { margin: 10px 0 22px 24px; padding-left: 4px; }
+        li { margin-bottom: 8px; padding-left: 4px; color: #cbd5e1; }
+        li::marker { color: var(--green); }
+
+        a {
+            color: #7dd3fc;
+            text-decoration: none;
+            text-underline-offset: 4px;
+            overflow-wrap: anywhere;
+            transition: color .2s ease;
+        }
+        a:hover { color: var(--green); text-decoration: underline; }
+
+        .contact {
+            margin-top: 18px;
+            padding: 24px;
+            border: 1px solid rgba(74, 222, 128, .2);
+            border-radius: 16px;
+            background: linear-gradient(135deg, rgba(34, 197, 94, .07), rgba(56, 189, 248, .07));
+        }
+        .contact p:last-child { margin-bottom: 0; }
+
+        .footer {
+            margin-top: 42px;
+            padding-top: 22px;
+            border-top: 1px solid rgba(148, 163, 184, .18);
+            color: #8291a8;
+            font-size: .88rem;
+            text-align: center;
+        }
+
+        @keyframes rise-in {
+            from { opacity: 0; transform: translateY(18px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 700px) {
+            .container { width: min(100% - 22px, 980px); margin: 22px auto; padding: 27px 21px; border-radius: 18px; }
+            .date { margin-bottom: 28px; }
+            h2 { margin-top: 30px; }
+            p, li { font-size: .95rem; }
+            .contact { padding: 18px; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after { animation-duration: .01ms !important; scroll-behavior: auto !important; }
+        }
+    </style>
+
+</head>
+
+<body>
+
+       <main class="container">
+
+           <h1>Privacy Policy</h1>
+
+           <div class="date">
+
+               October 12, 2026
+
+           </div>
+
+           <h2>3DGameHouse</h2>
+
+           <p>
+
+               <strong>3DGameHouse</strong> built the
+
+               <strong>3DGameHouse</strong> app as a Free app.
+
+               This SERVICE is provided by 3DGameHouse at no cost
+
+               and is intended for use as is.
+
+           </p>
+
+           <p>
+
+               This page is used to inform visitors regarding our policies
+
+               with the collection, use, and disclosure of Personal Information
+
+               if anyone decided to use our Service.
+
+           </p>
+
+           <p>
+
+               If you choose to use our Service, then you agree to the collection
+
+               and use of information in relation to this policy. The Personal
+
+               Information that we collect is used for providing and improving
+
+               the Service.
+
+           </p>
+
+           <p>
+
+               We will not use or share your information with anyone except as
+
+               described in this Privacy Policy.
+
+           </p>
+
+           <p>
+
+               The terms used in this Privacy Policy have the same meanings as
+
+               in our Terms and Conditions, which are accessible through the
+
+               Hunting Simulator Game application unless otherwise defined in
+
+               this Privacy Policy.
+
+           </p>
+
+           <h2>Information Collection And Use</h2>
+
+           <p>
+
+               For a better experience, while using our Service, we may require
+
+               you to provide us with certain personally identifiable information,
+
+               including but not limited to:
+
+           </p>
+
+           <ul>
+
+               <li>android.permission.ACCESS_NETWORK_STATE</li>
+
+               <li>android.permission.INTERNET</li>
+
+               <li>android.permission.WAKE_LOCK</li>
+
+           </ul>
+
+           <p>
+
+               The information that we request will be retained on your device
+
+               and is not collected by us in any way.
+
+           </p>
+
+           <p>
+
+               The app does use third-party services that may collect information
+
+               used to identify you. These services may collect information
+
+               according to their own privacy policies.
+
+           </p>
+
+           <p>
+
+               Third-party services used by the app may include:
+
+           </p>
+
+           <ul>
+
+               <li>Google Play Services</li>
+
+               <li>AdMob</li>
+
+               <li>Google Analytics for Firebase</li>
+
+               <li>Firebase Crashlytics</li>
+
+               <li>Appodeal</li>
+
+               <li>OneSignal</li>
+
+               <li>AppLovin</li>
+
+               <li>StartApp</li>
+
+                <li>CAS.AI</li>
+
+           </ul>
+
+           <h2>Log Data</h2>
+
+           <p>
+
+               We want to inform you that whenever you use our Service, in a case
+
+               of an error in the app, we may collect data and information through
+
+               third-party products on your phone called Log Data.
+
+           </p>
+
+           <p>
+
+               This Log Data may include information such as your device Internet
+
+               Protocol ("IP") address, device name, operating system version,
+
+               the configuration of the app when utilizing our Service, the time
+
+               and date of your use of the Service, and other statistics.
+
+           </p>
+
+           <h2>Cookies</h2>
+
+           <p>
+
+               Cookies are files with a small amount of data that are commonly
+
+               used as anonymous unique identifiers. These are sent to your
+
+               browser from the websites that you visit and are stored on your
+
+               device's internal memory.
+
+           </p>
+
+           <p>
+
+               This Service does not use these "cookies" explicitly. However,
+
+               the app may use third-party code and libraries that use cookies
+
+               to collect information and improve their services.
+
+           </p>
+
+           <p>
+
+               You have the option to either accept or refuse these cookies and
+
+               know when a cookie is being sent to your device. If you choose to
+
+               refuse our cookies, you may not be able to use some portions of
+
+               this Service.
+
+           </p>
+
+           <h2>Service Providers</h2>
+
+           <p>
+
+               We may employ third-party companies and individuals due to the
+
+               following reasons:
+
+           </p>
+
+           <ul>
+
+               <li>To facilitate our Service;</li>
+
+               <li>To provide the Service on our behalf;</li>
+
+               <li>To perform Service-related services; or</li>
+
+               <li>To assist us in analyzing how our Service is used.</li>
+
+           </ul>
+
+           <p>
+
+               We want to inform users of this Service that these third parties
+
+               may have access to your Personal Information. The reason is to
+
+               perform the tasks assigned to them on our behalf. However, they
+
+               are obligated not to disclose or use the information for any
+
+               other purpose.
+
+           </p>
+
+           <h2>Security</h2>
+
+           <p>
+
+               We value your trust in providing us your Personal Information,
+
+               thus we are striving to use commercially acceptable means of
+
+               protecting it.
+
+           </p>
+
+           <p>
+
+               But remember that no method of transmission over the internet,
+
+               or method of electronic storage is 100% secure and reliable,
+
+               and we cannot guarantee its absolute security.
+
+           </p>
+
+           <h2>Links to Other Sites</h2>
+
+           <p>
+
+               This Service may contain links to other sites. If you click on
+
+               a third-party link, you will be directed to that site.
+
+           </p>
+
+           <p>
+
+               Note that these external sites are not operated by us.
+
+               Therefore, we strongly advise you to review the Privacy Policy
+
+               of these websites.
+
+           </p>
+
+           <p>
+
+               We have no control over and assume no responsibility for the
+
+               content, privacy policies, or practices of any third-party sites
+
+               or services.
+
+           </p>
+
+           <h2>Children's Privacy</h2>
+
+           <p>
+
+               These Services do not address anyone under the age of 13.
+
+               We do not knowingly collect personally identifiable information
+
+               from children under 13 years of age.
+
+           </p>
+
+           <p>
+
+               In the case we discover that a child under 13 has provided us
+
+               with personal information, we immediately delete this information
+
+               from our servers.
+
+           </p>
+
+           <p>
+
+               If you are a parent or guardian and you are aware that your child
+
+               has provided us with personal information, please contact us so
+
+               that we will be able to take the necessary actions.
+
+           </p>
+
+           <h2>Changes to This Privacy Policy</h2>
+
+           <p>
+
+               We may update our Privacy Policy from time to time. Thus, you
+
+               are advised to review this page periodically for any changes.
+
+           </p>
+
+           <p>
+
+               We will notify you of any changes by posting the new Privacy
+
+               Policy on this page.
+
+           </p>
+
+           <p>
+
+               This policy is effective as of
+
+               <strong>October 5, 2026</strong>.
+
+           </p>
+
+           <h2>Contact Us</h2>
+
+           <div class="contact">
+
+               <p>
+
+                   If you have any questions or suggestions about our Privacy
+
+                   Policy, do not hesitate to contact us.
+
+               </p>
+
+               <p>
+
+                   <strong>Email:</strong>
+
+                   <a href="drasifshah20@gmail.com">
+
+                       drasifshah20@gmail.com
+
+                   </a>
+
+               </p>
+
+           </div>
+
+           <div class="footer">
+
+               © 2026 3DGameHouse. All rights reserved.
+
+           </div>
+
+       </main>
+
+</body>
+
+</html>
+
